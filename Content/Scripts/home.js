@@ -10,6 +10,7 @@
 
 function getTopUsers(callbackSuccess, callbackError) {
 
+	//var url = "http://share.intercom.fm/users/popular.json";
 	var url = "http://intercom-app-staging.herokuapp.com/users/popular.json";
 
 	$.ajax({
@@ -65,6 +66,7 @@ function userClick() {
 function loadWidget(id) {
 
 	var $widget = $("#about-widget iframe");
+	//var url = "http://share.intercom.fm/embed/explore/" + id;
 	var url = "http://intercom-app-staging.herokuapp.com/embed/explore/" + id;
 
 	$widget.attr("src", url);
