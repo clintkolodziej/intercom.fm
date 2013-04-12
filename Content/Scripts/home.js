@@ -18,6 +18,7 @@ function getTopUsers(callbackSuccess, callbackError) {
 	$.ajax({
 		url: url,
 		dataType: "json",
+		//contentType: 'text/plain',
 		success: callbackSuccess,
 		error: callbackError
 	});
@@ -32,6 +33,8 @@ function getUsersSuccess(data) {
 	//might need this to manually parse response if we need to return text/plain to make IE work
 	//json = 'json = ' + xdr.responseText; // the string now looks like..  json = { ... };
 	//eval(json); // json is now a regular JSON object
+
+	//alert(data);
 
 	$users = $("#about-users ul");
 
