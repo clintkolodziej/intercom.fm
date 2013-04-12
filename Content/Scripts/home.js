@@ -13,6 +13,8 @@ function getTopUsers(callbackSuccess, callbackError) {
 	//var url = "http://share.intercom.fm/users/popular.json";
 	var url = "http://intercom-app-staging.herokuapp.com/users/popular.json";
 
+	jQuery.support.cors = true;
+
 	$.ajax({
 		url: url,
 		dataType: "json",
@@ -27,9 +29,14 @@ function getTopUsers(callbackSuccess, callbackError) {
 
 function getUsersSuccess(data) {
 
+	//might need this to manually parse response if we need to return text/plain to make IE work
+	//json = 'json = ' + xdr.responseText; // the string now looks like..  json = { ... };
+	//eval(json); // json is now a regular JSON object
+
 	$users = $("#about-users ul");
 
 	var count = 0;
+
 	$.each(data, function (i, user) {
 
 		if (count == 0)
@@ -51,9 +58,9 @@ function getUsersSuccess(data) {
 // getUsersError: show an error if the users can't be loaded
 //
 
-function getUsersError() {
+function getUsersError(xhr, status, error) {
 
-	$("#about-users").html("<p>Error loading users</p>");
+	$("#about-users").html("<p>Error loading users: <br>" + error + "</p>");
 
 }
 
