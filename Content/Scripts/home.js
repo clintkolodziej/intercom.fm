@@ -18,7 +18,6 @@ function getTopUsers(callbackSuccess, callbackError) {
 	$.ajax({
 		url: url,
 		dataType: "json",
-		//contentType: 'text/plain',
 		success: callbackSuccess,
 		error: callbackError
 	});
