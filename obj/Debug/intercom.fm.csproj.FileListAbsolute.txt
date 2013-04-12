@@ -1,0 +1,7 @@
+W:\repositories\marketing.intercom.fm\obj\Debug\ResolveAssemblyReference.cache
+W:\repositories\marketing.intercom.fm\bin\intercom.fm.dll
+W:\repositories\marketing.intercom.fm\bin\intercom.fm.pdb
+W:\repositories\marketing.intercom.fm\bin\flamebug.pdb
+W:\repositories\marketing.intercom.fm\obj\Debug\intercom.fm.dll
+W:\repositories\marketing.intercom.fm\obj\Debug\intercom.fm.pdb
+W:\repositories\marketing.intercom.fm\bin\EntityFramework.xml

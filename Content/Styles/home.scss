@@ -1,0 +1,556 @@
+﻿@import "library/grid.scss";
+@import "library/helpers.scss";
+
+/*
+=========================================
+Container
+=========================================
+*/
+
+/* 4 column layout (default) */
+.container {
+	@include page-width(4);
+}
+
+#content {
+	min-width: 18em; /* 4 column width */
+	max-width: 37em; /* 6 column width */
+}
+
+/* 6 column layout */
+@media screen and (min-width: 27em) {
+	.container {
+		@include page-width(6);
+	}
+
+	#content {
+		min-width: 27em; /* 6 column width */
+		max-width: 36em; /* 8 column width */
+	}
+}
+
+/* 8 column layout */
+@media screen and (min-width: 36em) {
+	.container {
+		@include page-width(8);
+	}
+
+	#content {
+		min-width: 36em; /* 8 column width */
+		max-width: 45em; /* 10 column width */
+	}
+}
+
+/* 14 column layout */
+@media screen and (min-width: 63em) {
+	.container {
+		@include page-width(14);
+	}
+
+	#content {
+		min-width: 63em; /* 14 column width */
+		max-width: 72em; /* 16 column width */
+	}
+}
+
+#content {
+	margin: 0 auto;
+	//padding-bottom: $line-height * 2em;
+	background: #fff;
+	border: 1px solid #ccc;
+	border-top: 0;
+	@include border-radius(.25em);
+	//@include box-shadow(0 1px 8px #ccc);
+}
+
+#content section {
+	overflow: hidden;
+}
+
+#content section + section {
+	border-top: 1px solid #ccc;
+}
+
+/*
+=========================================
+Text Elements
+=========================================
+*/
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	color: #444;
+}
+
+.intro {
+	position: relative;
+	margin: 0 auto $line-height * 1em auto;
+	text-align: center;
+	font-size: .65em;
+	z-index: 1;
+
+	h3 {
+		margin-top: .25em;
+		color: #bbb;
+	}
+}
+
+/*
+=========================================
+Hero Section
+=========================================
+*/
+
+#hero {
+	@include max-column();
+
+	img {
+		display: block;
+	}
+
+	.intro img {
+		display: inline;
+		margin-top: $line-height * 1em;
+	}
+}
+
+.app {
+	display: inline-block;
+	position: relative;
+	width: 96px;
+}
+
+.app img {
+	width: 100%;
+	border-radius: 16%;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.app:hover {
+	-webkit-transform:scale(1.1);
+	-moz-transform:scale(1.1);
+	-ms-transform:scale(1.1);
+	-o-transform:scale(1.1);
+	transform:scale(1.1);
+}
+
+.app:active {
+	top: 1;
+}
+
+.app:before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 40%;
+	position: absolute;
+	background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+	background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+	background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+	background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+	background-image: linear-gradient(top, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+	border-radius: 30px 30px 45px 45px;
+}
+
+/*
+=========================================
+About
+=========================================
+*/
+
+#about-intro,
+#about-users,
+#about-widget {
+	margin-top: $line-height * 1em;
+	margin-bottom: $line-height * 1em;
+	@include max-column();
+}
+
+#about-users {
+	@include clear-children();
+
+	h3 {
+		margin-top: 0;
+	}
+
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	li {
+		float: left;
+		width: $line-height * 2.6em;
+		height: $line-height * 2.6em;
+		margin: $line-height * .25em;
+		overflow: hidden;
+		border: 2px solid #fff;
+		border-radius: .5em;
+		@include box-shadow(0 1px 4px #aaa);
+
+		&:hover {
+			@include box-shadow(0 3px 8px #aaa);
+			-webkit-transform:scale(1.2);
+			-moz-transform:scale(1.2);
+			-ms-transform:scale(1.2);
+			-o-transform:scale(1.2);
+			transform:scale(1.2);
+		}
+
+		img {
+			margin: 0 auto;
+			min-height: 100%;
+			width: 100%;
+		}
+	}
+}
+
+#about-widget {
+	height: $line-height * 17em;
+	-webkit-overflow-scrolling: touch;
+	overflow: auto;
+}
+
+#about-widget iframe {
+	width: 100%;
+	display: block;
+	height: 100%;
+	border: 0;
+	@include border-radius(.25em);
+}
+
+/*
+=========================================
+Story
+=========================================
+*/
+
+#story {
+	margin-bottom: $line-height * 1em;
+	clear: both;
+	@include max-column();
+}
+
+/*
+=========================================
+Listen
+=========================================
+*/
+
+#listen {
+	@include max-column();
+
+	ul {
+		padding-left: 1em;
+		font-size: .825em;
+	}
+
+	li {
+		margin-bottom: $line-height * 1em;
+	}
+}
+
+#listen-screenshot {
+	margin-top: $line-height * 1em;
+	@include max-column();
+
+	img {
+		display: block;
+	}
+}
+
+/*
+=========================================
+Create
+=========================================
+*/
+
+#create-intro,
+.create-step {
+	margin-top: $line-height * 1em;
+	margin-bottom: $line-height * 1em;
+	text-align: center;
+	@include max-column();
+
+	h4 {
+		font-weight: bold;
+		color: #d1433B;
+	}
+
+	p {
+		margin-top: .25em;
+		color: #bbb;
+	}
+
+	img {
+		display: block;
+		border-bottom: 1px solid #ccc;
+		margin: $line-height * 1em auto $line-height * 2em auto;
+	}
+}
+
+.create-step {
+	font-size: .825em;
+}
+
+.create-step:last-child {
+	margin-bottom: 0;
+
+	img {
+		border-bottom: 0;
+		margin-bottom: 0;
+	}
+}
+
+/*
+=========================================
+Used By
+=========================================
+*/
+
+#used-by {
+	margin-bottom: $line-height * 1em;
+	@include max-column();
+	clear: both;
+
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	li {
+		float: left;
+		width: $line-height * 2.6em;
+		height: $line-height * 2.6em;
+		margin: $line-height * .25em;
+		overflow: hidden;
+		border: 2px solid #fff;
+		border-radius: .5em;
+		@include box-shadow(0 1px 4px #aaa);
+
+		img {
+			margin: 0 auto;
+			min-height: 100%;
+			width: 100%;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+=========================================
+Responsive Layouts
+=========================================
+*/
+
+/* 6 column layout */
+@media screen and (min-width: 27em) {
+
+	//
+	// Intro
+	//
+
+	.intro {
+		font-size: .8725em;
+	}
+
+	//
+	// about
+	//
+
+	#about-users li {
+		width: $line-height * 4.5em;
+		height: $line-height * 4.5em;
+	}
+
+	#about-widget {
+		height: $line-height * 14em;
+	}
+
+	//
+	// Users
+	//
+
+	#used-by li {
+		width: $line-height * 4.5em;
+		height: $line-height * 4.5em;
+	}
+}
+
+/* 8 column layout */
+@media screen and (min-width: 36em) {
+
+	//
+	// Intro
+	//
+
+	.intro {
+		font-size: .8725em;
+		width: 80%;
+	}
+
+	#hero .intro {
+		margin-bottom: -1em;
+	}
+
+	//
+	// about
+	//
+
+	#about-users,
+	#about-widget {
+		@include column(4);
+	}
+
+	#about-users li {
+		width: $line-height * 2.6em;
+		height: $line-height * 2.6em;
+	}
+
+	#about-widget {
+		height: $line-height * 11em;
+	}
+
+	//
+	// Listen
+	//
+
+	#listen {
+		@include column(4);
+
+		.intro {
+			width: 100%;
+			margin-top: 3em;
+			margin-bottom: $line-height * 1em;
+		}
+	}
+
+	#listen-screenshot {
+		@include column(4);
+	}
+
+	//
+	// Create
+	//
+
+	.create-step {
+		float: left;
+		width: 30%;
+		margin: 0 1.5%;
+
+		img {
+			border-bottom: 0;
+			margin-bottom: 0;
+		}
+	}
+
+	//
+	// Users
+	//
+
+	#used-by li {
+		width: $line-height * 2.85em;
+		height: $line-height * 3em;
+	}
+}
+
+/* 14 column layout */
+@media screen and (min-width: 63em) {
+
+	//
+	// Intro
+	//
+
+	.intro {
+		font-size: 1em;
+		width: 50%;
+	}
+
+	#hero .intro {
+		margin-bottom: -4em;
+	}
+
+	//
+	// about
+	//
+
+	#about-users {
+		@include column(6);
+		@include prefix(1);
+	}
+
+	#about-widget {
+		@include column(6);
+		@include suffix(1);
+	}
+
+	#about-users li {
+		width: $line-height * 4em;
+		height: $line-height * 4em;
+	}
+
+	#about-widget {
+		height: $line-height * 16em;
+	}
+
+	//
+	// Listen
+	//
+
+	#listen {
+		@include column(6);
+		@include suffix(2);
+
+		.intro {
+			width: 100%;
+			margin-top: 7em;
+			margin-bottom: $line-height * 2em;
+		}
+
+		ul {
+			font-size: 1em;
+		}
+	}
+
+	#listen-screenshot {
+		margin-top: $line-height * 1em;
+		@include column(6);
+	}
+
+	//
+	// Create
+	//
+
+	.create-step {
+		float: left;
+		width: 30%;
+		margin: 0 1.5%;
+		font-size: 1em;
+
+		img {
+			border-bottom: 0;
+			margin-bottom: 0;
+		}
+	}
+
+	//
+	// Users
+	//
+
+	#used-by li {
+		width: $line-height * 4.7em;
+		height: $line-height * 4.7em;
+	}
+}

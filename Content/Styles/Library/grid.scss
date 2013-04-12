@@ -1,0 +1,58 @@
+﻿//
+//=========================================
+//Grid
+//=========================================
+//
+
+@import "global.scss";
+
+//
+// Structural Grid
+//
+
+$body-font-size-px: ($body-font-size / 100) * 16;
+$line-height-px: ($line-height * $body-font-size-px);
+$grid-ems: ($body-font-size / 100) * 16 * 1em;
+
+@mixin page-width($cols) {
+	width: ($cols * ($column-width + $gutter-width)) / $grid-ems;
+}
+
+@mixin column($cols) {
+	display: inline;
+	float: left;
+	width: ($cols * ($column-width + $gutter-width) - $gutter-width) / $grid-ems;
+	margin-left: ($gutter-width / 2) / $grid-ems;
+	margin-right: ($gutter-width / 2) / $grid-ems;
+}
+
+@mixin max-column() {
+	display: block;
+	float: none;
+	margin-left: ($gutter-width / 2) / $grid-ems;
+	margin-right: ($gutter-width / 2) / $grid-ems;
+}
+
+@mixin prefix($cols) {
+	padding-left: ($cols * ($column-width + ($gutter-width / 2))) / $grid-ems;
+}
+
+@mixin suffix($cols) {
+	padding-right: ($cols * ($column-width + ($gutter-width / 2))) / $grid-ems;
+}
+
+//
+// Typographic Grid
+//
+
+@mixin font-line-height($fontsize) {
+	line-height: (ceiling(($body-font-size-px * $fontsize) / $line-height-px) * $line-height-px) / ($fontsize * $body-font-size-px);
+}
+
+@mixin font-margin-top($fontsize) {
+	margin-top: $line-height / $fontsize * 1em;
+}
+
+@mixin font-margin-bottom($fontsize) {
+	margin-bottom: $line-height/ $fontsize * 1em;
+}

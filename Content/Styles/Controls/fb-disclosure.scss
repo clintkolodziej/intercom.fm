@@ -1,0 +1,18 @@
+/*
+=========================================
+flamebug:Disclosure
+=========================================
+*/
+
+.fb-disclosure {
+	padding-right: 1em;
+	background: url(../image/controls/fb-disclosure-right.png) no-repeat right 85%;
+}
+
+.fb-disclosure.open {
+	background: url(../image/controls/fb-disclosure-down.png) no-repeat right 85%;
+}
+
+.fb-disclosure.closed {
+	background: url(../image/controls/fb-disclosure-right.png) no-repeat right 85%;
+}

@@ -1,0 +1,223 @@
+/*
+=========================================
+Theme Layout
+=========================================
+*/
+
+@import "library/grid.scss";
+@import "library/helpers.scss";
+
+/*
+=========================================
+Resets
+=========================================
+*/
+
+body, .container, #content, #footer, #nav, #nav ul, #nav ui li {
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	clear: both;
+}
+
+img {
+	max-width: 100%;
+}
+
+/*
+=========================================
+Page Background
+=========================================
+*/
+
+body {
+	background: #f0f2e7 url(/content/images/body.png);
+	color: #888;
+}
+
+/*
+=========================================
+Container
+=========================================
+*/
+
+.container {
+	margin: 0 auto;
+}
+
+/*
+=========================================
+Header
+=========================================
+*/
+
+#header {
+	padding: .5em 0;
+	background: #a1332b url(/content/images/header.png) center top repeat;
+	border-bottom: 2px solid #b1433b;
+	@include clear-children();
+}
+
+/*
+=========================================
+Content
+=========================================
+*/
+
+#content {
+	@include clear-children();
+}
+
+/*
+=========================================
+Footer
+=========================================
+*/
+
+#footer {
+	padding: 2em 0;
+	@include clear-children();
+}
+
+#credits {
+	@include max-column();
+	text-align: center;
+	font-size: .75em;
+}
+
+/*
+=========================================
+Logo
+=========================================
+*/
+
+#logo {
+	float: left;
+	padding-right: 1.5em;
+	line-height: 4em;
+	font-size: .875em;
+	font-weight: bold;
+	color: #fff;
+}
+
+#logo img {
+	float: left;
+	height: 4em;
+}
+
+/*
+=========================================
+Navigation
+=========================================
+*/
+
+#nav {
+	@include clear-children();
+}
+
+#nav ul {
+	list-style: none;
+	display: none;
+	clear: both;
+}
+
+#nav ul.open {
+	display: block;
+}
+
+#nav ul li {
+	float: none;
+	padding: 0 .125em;
+	border-top: 1px solid #b1433B;
+}
+
+#nav ul li a {
+	display: block;
+	height: 4em;
+	padding: 0 1.5em;
+	line-height: 4em;
+	font-size: .875em;
+	color: #F0F2E7;
+}
+
+#nav ul li a:hover {
+	color: #fff;
+	background-color: rgba(0,0,0,0.05);
+	border-radius: .5em;
+}
+
+/*
+=========================================
+Navigation Button
+=========================================
+*/
+
+#nav-button {
+	float: right;
+	width: 1.75em;
+	margin-top: .75em;
+	padding: 0;
+	font-size: 1.5em;
+	box-shadow: inset 0 12px 0 rgba(255, 255, 255, 0.075), 0 1px 0 rgba(0, 0, 0, 0.075);
+	background: transparent;
+	border: 1px solid #B1433B;
+	border-radius: .125em;
+
+	&:hover {
+		box-shadow: inset 0 12px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.1);
+		border: 1px solid #C1534B;
+	}
+}
+
+#nav-button i {
+	display: block;
+	margin: 0 auto;
+	padding: 0;
+	width: 1em;
+	line-height: 1;
+	font-style: normal;
+	font-weight: bold;
+	color: #fff;
+	@include transition(all, 0.1s);
+}
+
+#nav-button i.open {
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+/*
+=========================================
+Breakpoints
+=========================================
+*/
+
+//
+// Larger Screens
+//
+
+/* 14 column layout */
+@media screen and (min-width: 63em) {
+
+	#nav-button {
+		display: none;
+	}
+
+	#nav {
+		float: left;
+		clear: none;
+	}
+	#nav ul {
+		display: block;
+		margin-left: 4em;
+		clear: none;
+
+		li {
+			float: left;
+			border: 0;
+		}
+	}
+}

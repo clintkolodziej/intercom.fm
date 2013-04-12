@@ -1,0 +1,140 @@
+﻿@import "library/grid.scss";
+@import "library/helpers.scss";
+
+/*
+=========================================
+Container
+=========================================
+*/
+
+/* 4 column layout (default) */
+.container {
+	@include page-width(4);
+}
+
+/* 6 column layout */
+@media screen and (min-width: 27em) {
+	.container {
+		@include page-width(6);
+	}
+}
+
+/* 8 column layout */
+@media screen and (min-width: 36em) {
+	.container {
+		@include page-width(8);
+	}
+}
+
+/* 12 column layout */
+@media screen and (min-width: 54em) {
+	.container {
+		@include page-width(12);
+	}
+}
+
+/*
+=========================================
+Introduction
+=========================================
+*/
+
+#introduction {
+	@include max-column();
+}
+
+/*
+=========================================
+Text
+=========================================
+*/
+
+#text-introduction, #text-headers, #text-body {
+	@include max-column();
+}
+
+#text-headers .text-grid {
+	padding-bottom: $line-height * 1em;
+}
+
+.text-grid {
+	box-sizing: border-box;
+	margin: $line-height * 1em auto;
+	padding: 0 $line-height * 1em;
+	background-color: #fff;
+	background-position: center -1px;
+	background-size: 100% 26px;
+	background-image: -webkit-linear-gradient(#eee .05em, transparent .05em);
+	border: 1px solid #ccc;
+	@include border-radius(.25em);
+}
+
+/*
+=========================================
+Code
+=========================================
+*/
+
+#code-introduction, #inline-code, #block-code {
+	@include max-column();
+}
+
+/*
+=========================================
+Tables
+=========================================
+*/
+
+#tables-introduction, #default-table, #striped-table, #bordered-table {
+	@include max-column();
+}
+
+/*
+=========================================
+Example HTML / CSS
+=========================================
+*/
+
+.example {
+    padding: 0 1em;
+    border: 1px solid #DDD;
+	@include border-radius(.25em);
+}
+
+.example,
+.example-html,
+.example-css {
+	position: relative;
+}
+
+.example,
+.example-html code,
+.example-css code {
+	padding-top: $line-height * 1em;
+}
+
+.example:after,
+.example-html:after,
+.example-css:after {
+	position: absolute;
+	text-transform: uppercase;
+	top: -1px;
+	left: -1px;
+	padding: .25em 1em;
+	font-size: .75em;
+	border: 1px solid $border-color;
+	color: #25AAE1;
+	border-radius: .325em 0 .325em 0;
+}
+
+.example:after {
+	content: "Example";
+}
+
+.example-html:after {
+	content: "HTML";
+}
+
+.example-css:after {
+	content: "CSS";
+}
