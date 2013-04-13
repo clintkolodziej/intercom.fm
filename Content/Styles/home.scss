@@ -99,11 +99,11 @@ h1, h2, h3, h4, h5, h6 {
 		width: 135px;
 		height: 40px;
 		margin-top: $line-height * 1em;
-		background-image(/content/images/app-store.svg);
+		background-image: url(/content/images/app-store.svg);
 	}
 
 	a.no-svg {
-		background-image(/content/images/app-store.png);
+		background-image: url(/content/images/app-store.png);
 	}
 }
 
