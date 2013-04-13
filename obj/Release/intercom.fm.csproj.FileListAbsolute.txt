@@ -16,3 +16,4 @@ C:\Development\intercom.fm\bin\System.Web.Http.xml
 C:\Development\intercom.fm\bin\System.Web.Http.WebHost.xml
 C:\Development\intercom.fm\obj\Release\intercom.fm.dll
 C:\Development\intercom.fm\obj\Release\intercom.fm.pdb
+C:\Development\intercom.fm\obj\Release\intercom.fm.csprojResolveAssemblyReference.cache

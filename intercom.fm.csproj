@@ -132,7 +132,7 @@
     <Content Include="Content\Images\loading-intercom.gif" />
     <Content Include="Content\Images\Logo.png" />
     <Content Include="Content\Images\phone.jpg" />
-    <Content Include="Content\Images\Uncompressed\app-store.png" />
+    <Content Include="Content\Images\app-store.png" />
     <Content Include="Content\Images\Uncompressed\apple-touch-icon.png" />
     <Content Include="Content\Images\Uncompressed\favicon.png" />
     <Content Include="Content\Images\Uncompressed\header.png" />

@@ -93,6 +93,18 @@ h1, h2, h3, h4, h5, h6 {
 		margin-top: .25em;
 		color: #bbb;
 	}
+
+	a {
+		display: inline-block;
+		width: 135px;
+		height: 40px;
+		margin-top: $line-height * 1em;
+		background-image(/content/images/app-store.svg);
+	}
+
+	a.no-svg {
+		background-image(/content/images/app-store.png);
+	}
 }
 
 /*
