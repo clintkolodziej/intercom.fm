@@ -13,20 +13,16 @@ function getTopUsers(callbackSuccess, callbackError) {
 	//var url = "http://api.intercom.fm/users/popular.json";
 	var url = "http://intercom-app-staging.herokuapp.com/users/popular.json";
 
-	var urlIE = "/api/topusers";
-
-	if ($("html").hasClass("ie")) {
-		alert("IE legacy");
+	//Old IE versions prior to IE10 don't do CORS properly, use local web api proxy instead
+	if ($("html").hasClass("old-ie")) {
 		url = "/api/topusers";
-	}
-	else {
-		alert("Modern browser");
+		alert("old ie, using local proxy api call instead of direct call");
 	}
 
 	jQuery.support.cors = true;
 
 	$.ajax({
-		url: urlIE,
+		url: url,
 		dataType: "json",
 		success: callbackSuccess,
 		error: callbackError

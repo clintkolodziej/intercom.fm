@@ -152,7 +152,6 @@
     <Content Include="Content\Scripts\jquery-1.9.1.min.js" />
     <Content Include="Content\Scripts\modernizr-1.7.js" />
     <Content Include="Content\Scripts\modernizr-1.7.min.js" />
-    <Content Include="Content\Scripts\xdr.js" />
     <Content Include="Content\Styles\Library\normalize.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
