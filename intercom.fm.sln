@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "intercom.fm", "intercom.fm.csproj", "{48360217-CD34-4F51-BE6E-84DDEB6B1355}"
 EndProject
 Global
