@@ -10,13 +10,23 @@
 
 function getTopUsers(callbackSuccess, callbackError) {
 
-	//var url = "http://share.intercom.fm/users/popular.json";
+	//var url = "http://api.intercom.fm/users/popular.json";
 	var url = "http://intercom-app-staging.herokuapp.com/users/popular.json";
+
+	var urlIE = "/api/topusers";
+
+	if ($("html").hasClass("ie")) {
+		alert("IE legacy");
+		url = "/api/topusers";
+	}
+	else {
+		alert("Modern browser");
+	}
 
 	jQuery.support.cors = true;
 
 	$.ajax({
-		url: url,
+		url: urlIE,
 		dataType: "json",
 		success: callbackSuccess,
 		error: callbackError
@@ -28,12 +38,6 @@ function getTopUsers(callbackSuccess, callbackError) {
 //
 
 function getUsersSuccess(data) {
-
-	//might need this to manually parse response if we need to return text/plain to make IE work
-	//json = 'json = ' + xdr.responseText; // the string now looks like..  json = { ... };
-	//eval(json); // json is now a regular JSON object
-
-	//alert(data);
 
 	$users = $("#about-users ul");
 
@@ -75,8 +79,8 @@ function userClick() {
 function loadWidget(id) {
 
 	var $widget = $("#about-widget iframe");
-	//var url = "http://share.intercom.fm/embed/explore/" + id;
-	var url = "http://intercom-app-staging.herokuapp.com/embed/explore/" + id;
+	var url = "http://share.intercom.fm/embed/explore/" + id;
+	//var url = "http://intercom-app-staging.herokuapp.com/embed/explore/" + id;
 
 	$widget.attr("src", url);
 

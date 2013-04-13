@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Http;
 using System.Web.Routing;
 
 namespace intercom.fm
@@ -26,11 +27,19 @@ namespace intercom.fm
 				new { controller = "Scss", action = "Style", id = UrlParameter.Optional } // Parameter defaults
 			);
 
+			routes.MapHttpRoute(
+				name: "ApiDefault",
+				routeTemplate: "api/{controller}/{id}",
+				defaults: new { id = RouteParameter.Optional }
+			);
+
 			routes.MapRoute(
 				"Default", // Route name
 				"{controller}/{action}/{id}", // URL with parameters
 				new { controller = "Home", action = "Index", id = UrlParameter.Optional } // Parameter defaults
 			);
+
+
 
 		}
 
