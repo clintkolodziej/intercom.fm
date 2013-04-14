@@ -271,6 +271,12 @@ Story
 	@include max-column();
 }
 
+#signature {
+	display: block;
+	margin: $line-height * 1em auto;
+	height: 45px;
+}
+
 /*
 =========================================
 Listen
@@ -376,7 +382,17 @@ Used By
 	}
 }
 
+/*
+=========================================
+Video
+=========================================
+*/
 
+#video {
+	display: block;
+	width: 20em; //560
+	height: 11.25em; //315
+}
 
 
 
@@ -428,6 +444,15 @@ Responsive Layouts
 	#used-by li {
 		width: $line-height * 4.5em;
 		height: $line-height * 4.5em;
+	}
+
+	//
+	// Video
+	//
+
+	#video {
+		width: 27em; //560
+		height: 15.12em; //315
 	}
 }
 
@@ -507,6 +532,15 @@ Responsive Layouts
 	#used-by li {
 		width: $line-height * 2.85em;
 		height: $line-height * 3em;
+	}
+
+	//
+	// Video
+	//
+
+	#video {
+		width: 36em;
+		height: 20.25em;
 	}
 }
 
@@ -598,5 +632,15 @@ Responsive Layouts
 	#used-by li {
 		width: $line-height * 4.7em;
 		height: $line-height * 4.7em;
+	}
+
+	//
+	// Video
+	//
+
+	#video {
+		display: block;
+		width: 63em; //560
+		height: 35.4375em; //315
 	}
 }

@@ -7,15 +7,9 @@ flamebug:PopupPanel
 .fb-popuppanel {
 	display: none;
 	position: absolute;
-	background-color: #f8f8f8;
-	background-color: rgba(248,248,248,0.95);
-	border: 1px solid #ccc;
-
-	-webkit-border-radius: .75em;
-	-moz-border-radius: .75em;
-	-o-border-radius: .75em;
-	-ms-border-radius: .75em;
-	border-radius: .75em;
+	background-color: #000;
+	background-color: rgba(0,0,0,0.95);
+	padding: .75em;
 
 	-webkit-box-shadow: 0 0 50px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0 0 50px rgba(0,0,0,0.75);
@@ -36,7 +30,7 @@ flamebug:PopupPanel
 	right: -15px;
 	height: 30px;
 	width: 30px;
-	background-image: url('./image/controls/fb-popuppanel-close.png');
+	background-image: url('/content/images/controls/fb-popuppanel-close.png');
 	cursor: pointer;
 	z-index: 1102;
 }

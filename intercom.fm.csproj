@@ -122,6 +122,8 @@
     <Content Include="bin\flamebug.pdb" />
     <Content Include="bin\flamebug.Web.dll" />
     <Content Include="bin\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="Content\Images\Controls\fb-popuppanel-close.png" />
+    <Content Include="Content\Images\Signature.png" />
     <Content Include="Content\Images\app-store.svg" />
     <Content Include="Content\Images\appicon.jpg" />
     <Content Include="Content\Images\apple-touch-icon.png" />
@@ -149,6 +151,7 @@
     <Content Include="Content\Images\Web-Hero.png" />
     <Content Include="Content\Images\Web-Mix.png" />
     <Content Include="Content\Images\Web-Record.png" />
+    <Content Include="Content\Scripts\flamebug.popuppanel.js" />
     <Content Include="Content\Scripts\home.js" />
     <Content Include="Content\Scripts\jquery-1.9.1.js" />
     <Content Include="Content\Scripts\jquery-1.9.1.min.js" />
