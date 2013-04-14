@@ -191,6 +191,7 @@ About
 	}
 
 	li {
+		position: relative;
 		float: left;
 		//width: $line-height * 2.6em;  //9 users
 		//height: $line-height * 2.6em; //9 users
@@ -209,6 +210,31 @@ About
 			-ms-transform:scale(1.2);
 			-o-transform:scale(1.2);
 			transform:scale(1.2);
+			z-index: 1;
+		}
+
+		&:active {
+			-webkit-transform:scale(1.1);
+			-moz-transform:scale(1.1);
+			-ms-transform:scale(1.1);
+			-o-transform:scale(1.1);
+			transform:scale(1.1);
+		}
+
+		&:hover:after {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			content: "";
+			background: url(/content/images/play.svg) center center no-repeat;
+			background-size: 40%;
+			opacity: 0.85;
+		}
+
+		html.no-svg &:hover:after {
+			background-image: url(/content/images/play.png);
 		}
 
 		img {
