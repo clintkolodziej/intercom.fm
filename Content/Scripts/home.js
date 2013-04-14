@@ -44,7 +44,7 @@ function getUsersSuccess(data) {
 		if (count == 0)
 			loadWidget(user.facebook_id);
 
-		if (count >= 9)
+		if (count >= 4)
 			return;
 
 		var avatar = (user.image_url != null) ? user.image_url : "/content/images/avatar.gif";

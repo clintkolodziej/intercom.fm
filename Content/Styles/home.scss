@@ -192,8 +192,10 @@ About
 
 	li {
 		float: left;
-		width: $line-height * 2.6em;
-		height: $line-height * 2.6em;
+		//width: $line-height * 2.6em;  //9 users
+		//height: $line-height * 2.6em; //9 users
+		width: $line-height * 4.25em; //4 users
+		height: $line-height * 4.25em;//4 users
 		margin: $line-height * .25em;
 		overflow: hidden;
 		border: 2px solid #fff;
@@ -383,8 +385,10 @@ Responsive Layouts
 	//
 
 	#about-users li {
-		width: $line-height * 4.5em;
-		height: $line-height * 4.5em;
+		//width: $line-height * 4.5em;  //9 users
+		//height: $line-height * 4.5em; //9 users
+		width: $line-height * 3.25em;  //4 users
+		height: $line-height * 3.25em; //4 users
 	}
 
 	#about-widget {
@@ -427,8 +431,10 @@ Responsive Layouts
 	}
 
 	#about-users li {
-		width: $line-height * 2.6em;
-		height: $line-height * 2.6em;
+		//width: $line-height * 2.6em;  //9 users
+		//height: $line-height * 2.6em; //9 users
+		width: $line-height * 4em;  //4 users
+		height: $line-height * 4em; //4 users
 	}
 
 	#about-widget {
@@ -509,8 +515,10 @@ Responsive Layouts
 	}
 
 	#about-users li {
-		width: $line-height * 4em;
-		height: $line-height * 4em;
+		//width: $line-height * 4em;  //9 users
+		//height: $line-height * 4em; //9 users
+		width: $line-height * 6em;  //4 users
+		height: $line-height * 6em; //4 users
 	}
 
 	#about-widget {
