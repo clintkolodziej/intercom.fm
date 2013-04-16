@@ -66,6 +66,11 @@
 			base.windowWidth = $(window).width();
 			base.documentHeight = $(document).height();
 			base.documentWidth = $(document).width();
+
+			//get function callbacks from the data attributes on the popup element
+			base.options.showCallback = window[base.$el.attr("data-show-callback")];
+			base.options.hideCallback = window[base.$el.attr("data-hide-callback")];
+
 		};
 
 		//
@@ -287,6 +292,7 @@
 
 			base.showPanel();
 			base.showOverlay();
+			base.options.showCallback();
 
 		};
 
@@ -298,7 +304,8 @@
 
 			base.hidePanel();
 			base.hideOverlay();
-			
+			base.options.hideCallback();
+
 		};
 
 		base.init(); // trigger the initialization
@@ -324,7 +331,10 @@
 		fadePanelOutSpeed: "fast",	// speed to fade out the panel
 
 		centerOnScroll: false,		// center the panel when the window is scrolled
-		centerOnResize: true		// center the panel when the window is resized
+		centerOnResize: true,		// center the panel when the window is resized
+
+		showCallback: null,
+        hideCallback: null
 	};
 
 	//

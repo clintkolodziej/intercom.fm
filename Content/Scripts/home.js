@@ -11,12 +11,11 @@
 function getTopUsers(callbackSuccess, callbackError) {
 
 	//var url = "http://api.intercom.fm/users/popular.json";
-	var url = "http://intercom-app-staging.herokuapp.com/users/popular.json";
+	var url = "http://intercom-app-staging.herokuapp.com/users/popular.json"; //staging
 
 	//Old IE versions prior to IE10 don't do CORS properly, use local web api proxy instead
 	if ($("html").hasClass("old-ie")) {
 		url = "/api/topusers";
-		alert("old ie, using local proxy api call instead of direct call");
 	}
 
 	jQuery.support.cors = true;
@@ -76,8 +75,32 @@ function loadWidget(id) {
 
 	var $widget = $("#about-widget iframe");
 	var url = "http://share.intercom.fm/embed/explore/" + id;
-	//var url = "http://intercom-app-staging.herokuapp.com/embed/explore/" + id;
+	//var url = "http://intercom-app-staging.herokuapp.com/embed/explore/" + id;  //staging
 
 	$widget.attr("src", url);
+
+}
+
+function showVideo() {
+
+	var iframe = $("#video");
+
+	iframe.css({
+		visibility: "visible"
+	});
+
+	iframe.attr("src", iframe.attr("data-src"));
+}
+
+function hideVideo() {
+
+	var iframe = $("#video");
+
+	iframe.css({
+		visibility: "hidden"
+	});
+
+	iframe.attr("data-src", iframe.attr("src"));
+	iframe.attr("src", "");
 
 }
