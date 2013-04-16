@@ -10,8 +10,8 @@
 
 function getTopUsers(callbackSuccess, callbackError) {
 
-	//var url = "http://api.intercom.fm/users/popular.json";
-	var url = "http://intercom-app-staging.herokuapp.com/users/popular.json"; //staging
+	var url = "http://api.intercom.fm/users/popular.json";
+	//var url = "http://intercom-app-staging.herokuapp.com/users/popular.json"; //staging
 
 	//Old IE versions prior to IE10 don't do CORS properly, use local web api proxy instead
 	if ($("html").hasClass("old-ie")) {
