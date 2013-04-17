@@ -201,6 +201,8 @@ About
 		overflow: hidden;
 		border: 2px solid #fff;
 		border-radius: .5em;
+		background: url(/content/images/avatar.gif) center center no-repeat;
+		@include background-size(cover);
 		@include box-shadow(0 1px 4px #aaa);
 
 		&:hover {

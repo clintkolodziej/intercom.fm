@@ -47,7 +47,8 @@ function getUsersSuccess(data) {
 			return;
 
 		var avatar = (user.image_url != null) ? user.image_url : "/content/images/avatar.gif";
-		$item = $("<li data-fb-id='" + user.facebook_id + "'><img alt='" + user.full_name + "' id='user-avatar' src='" + avatar + "'></li>");
+		//$item = $("<li data-fb-id='" + user.facebook_id + "'><img alt='" + user.full_name + "' id='user-avatar' src='" + avatar + "'></li>");
+		$item = $("<li data-fb-id='" + user.facebook_id + "' style='background-image: url(" + avatar + ")'></li>");
 		$users.append($item);
 		$item.click(userClick);
 		count++;
