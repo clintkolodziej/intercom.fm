@@ -25,8 +25,9 @@ namespace intercom.fm.Controllers
 
 		private string CallTopUsersAPI()
 		{
-			string url = "http://intercom-app-staging.herokuapp.com/users/popular.json";
-
+			//string url = "http://intercom-app-staging.herokuapp.com/users/popular.json";
+			string url = "http://api.intercom.fm/users/popular.json";
+		
 			try
 			{
 				using (HttpClient client = new HttpClient())
