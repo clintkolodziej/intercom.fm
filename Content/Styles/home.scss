@@ -9,6 +9,7 @@ Container
 
 /* 4 column layout (default) */
 .container {
+	position: relative;
 	@include page-width(4);
 }
 
@@ -105,6 +106,30 @@ h1, h2, h3, h4, h5, h6 {
 	html.no-svg & a {
 		background-image: url(/content/images/app-store.png);
 	}
+}
+
+.top {
+	position: absolute;
+	top: -1em;
+	right: -4em;
+	font-size: .875em;
+	color: #ccc;
+	padding: 1em;
+}
+
+.top::before {
+	content: "";
+	display: block;
+	margin: 0 auto;
+	width: 0;
+	height: 0;
+	border: 1px solid blue;
+	border: .5em solid transparent;
+	border-bottom-color: #e0e0e0;
+}
+
+.top:hover::before {
+	border-bottom-color: #D1433B;
 }
 
 /*
@@ -305,6 +330,11 @@ Listen
 	img {
 		display: block;
 	}
+}
+
+#home-listen .top {
+	top: 1em;
+
 }
 
 /*
