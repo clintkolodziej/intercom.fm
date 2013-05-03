@@ -123,6 +123,7 @@
     <Content Include="bin\flamebug.Web.dll" />
     <Content Include="bin\ICSharpCode.SharpZipLib.dll" />
     <Content Include="Content\Images\Controls\fb-popuppanel-close.png" />
+    <Content Include="Content\Images\Logo-Black.png" />
     <Content Include="Content\Images\Signature.png" />
     <Content Include="Content\Images\app-store.svg" />
     <Content Include="Content\Images\appicon.jpg" />
